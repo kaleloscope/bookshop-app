@@ -1,0 +1,15 @@
+<%= form_for :book, local: true, url: books_path, method: :post do |f| %>
+  <div class='form-name'>
+    <%= f.label :name, "Book Name"%>
+    <%= f.text_field :name %>
+  </div>
+  <div class='form-no-of-pages'>
+    <%= f.label :no_of_pages, "No of pages"%>
+    <%= f.number_field :no_of_pages %>
+  </div>
+  <div class='form-no-of-pages'>
+    <%= f.label :summary, "Summary"%>
+    <%= f.text_area :summary %>
+  </div>
+  <div><%= f.submit %></div>
+<% end %>
