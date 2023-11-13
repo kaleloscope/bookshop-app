@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   def index
+    @books = Book.all
   end
 
   def new
@@ -10,10 +11,10 @@ class BooksController < ApplicationController
   end
 
   def create
-    binding.pry
     @book = Book.new(book_params)
     @book.save
     redirect_to @book
+    # render 'index'
   end
 
   private

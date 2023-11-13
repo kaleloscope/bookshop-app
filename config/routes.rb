@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  get 'jobs/index'
   root 'books#index'
-  resources :books
+  # resources :books
+  resources :authors, only: %i[index create new show] do
+    resources :books, only: [:index, :new, :create]
+  end
+  resources :books, only: [:show, :edit, :update, :destroy]
+  resources :jobs, only: [:create]
 
   # get 'welcome/index'
   # get 'welcome/new'

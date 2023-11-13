@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  toaddr: 
+  subject: MyString
+  body: MyText
+
+two:
+  toaddr: 
+  subject: MyString
+  body: MyText

@@ -1,2 +1,19 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h2>Books Listings</h2>
+
+<table>
+  <tr>
+    <th>Sr no.</th>
+    <th>Book Name</th>
+    <th>No of pages</th>
+    <th>Summary</th>
+  </tr>
+  <% @books.each_with_index do |book, i|%>
+   <tr>
+    <td><%= i+1 %></td>
+    <td><%= book.name %></td>
+    <td><%= book.no_of_pages %></td>
+    <td><%= book.summary %></td>
+    <td><%= link_to 'Show', book_path(book) %></td>
+  </tr>
+  <% end %>
+</table>
